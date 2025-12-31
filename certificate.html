@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificado - Primeiro Estágio em Programação</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header class="hero">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="curso.html">Curso</a>
+    <a href="about.html">Sobre</a>
+    <a href="pricing.html">Preços</a>
+    <a href="contact.html">Contato</a>
+  </nav>
+  <h1>Certificado de Conclusão</h1>
+</header>
+
+<section class="section">
+  <h2>Parabéns por Completar o Curso!</h2>
+  <div id="progressInfo" style="margin-bottom: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+    <p><strong>Seu Progresso:</strong> <span id="progressText">Carregando...</span></p>
+  </div>
+  <p>Preencha seu nome abaixo e clique em "Gerar Certificado" para baixar seu certificado em PDF.</p>
+  
+  <div class="certificate-form">
+    <div class="form-group">
+      <label for="nome">Seu Nome Completo:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" required>
+    </div>
+    
+    <button id="generateCert" class="btn">Gerar Certificado</button>
+  </div>
+  
+  <div id="certPreview" style="display: none; margin-top: 20px;">
+    <h3>Prévia do Certificado:</h3>
+    <div id="certContent" style="border: 2px solid #3b82f6; padding: 30px; max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+      <div style="text-align: center; border: 3px double #3b82f6; padding: 20px; background: white; border-radius: 10px;">
+        <h1 style="color: #3b82f6; margin: 0; font-size: 32px; font-weight: bold;">CERTIFICADO DE CONCLUSÃO</h1>
+        <div style="width: 200px; height: 2px; background: #10b981; margin: 10px auto;"></div>
+        <h2 style="color: #374151; margin: 10px 0; font-size: 20px;">Aprendendo programação do 0</h2>
+        <p style="font-size: 16px; margin: 20px 0;">Certificamos que</p>
+        <h3 id="previewNome" style="color: #3b82f6; font-size: 28px; margin: 15px 0; text-transform: uppercase;">[Seu Nome]</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin: 15px 0;">
+          concluiu com êxito o curso de Desenvolvimento Web Front-end,<br>
+          demonstrando proficiência em HTML, CSS, JavaScript e Python.
+        </p>
+        <p id="previewData" style="font-size: 14px; margin: 20px 0; color: #6b7280;">Emitido em [Data]</p>
+        <div style="display: flex; justify-content: space-around; margin-top: 40px;">
+          <div style="text-align: center;">
+            <div style="width: 150px; border-top: 1px solid #374151; margin-bottom: 5px;"></div>
+            <p style="font-size: 14px; margin: 0;">Guilherme Carvalho</p>
+            <p style="font-size: 12px; color: #6b7280;">Instrutor e Desenvolvedor Full Stack</p>
+          </div>
+        </div>
+        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
+          <p style="font-size: 12px; color: #9ca3af;">Código de Verificação: CERT-XXXXXXX</p>
+          <p style="font-size: 10px; color: #9ca3af;">Este certificado é válido e pode ser usado para mostrar em entrevistas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+<script>
+  // Mostrar progresso
+  document.addEventListener('DOMContentLoaded', function() {
+    const progress = JSON.parse(localStorage.getItem('courseProgress')) || [];
+    const totalLessons = 14; // Ajuste conforme o número de lições
+    const progressText = document.getElementById('progressText');
+    progressText.textContent = `${progress.length}/${totalLessons} lições visualizadas`;
+    
+    if (progress.length === totalLessons) {
+      progressText.style.color = '#10b981';
+      progressText.textContent += ' - Pronto para emitir seu certificado!';
+    } else {
+      progressText.style.color = '#f59e0b';
+      progressText.textContent += ' - Complete todas as lições primeiro.';
+    }
+
+    // Prévia do certificado
+    const nomeInput = document.getElementById('nome');
+    const previewNome = document.getElementById('previewNome');
+    const previewData = document.getElementById('previewData');
+    const certPreview = document.getElementById('certPreview');
+
+    nomeInput.addEventListener('input', function() {
+      const nome = nomeInput.value.trim();
+      if (nome) {
+        previewNome.textContent = nome.toUpperCase();
+        const dataAtual = new Date().toLocaleDateString('pt-BR', {
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric'
+        });
+        previewData.textContent = `Emitido em ${dataAtual}`;
+        certPreview.style.display = 'block';
+      } else {
+        certPreview.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html></content>

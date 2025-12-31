@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Área do Aluno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="curso">
+
+<header class="course-header">
+  <h1>Curso: Aprenda Programação do Zero</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="curso.html">Curso</a>
+    <a href="about.html">Sobre</a>
+    <a href="pricing.html">Preços</a>
+    <a href="contact.html">Contato</a>
+  </nav>
+</header>
+
+<div class="course-content">
+<aside class="sidebar">
+  <h2>Conteúdo do Curso</h2>
+  <ul>
+    <li onclick="loadLesson(1)">Boas-vindas e Introdução</li>
+    <li onclick="loadLesson(2)">Como Funciona a Programação</li>
+    <li onclick="loadLesson(3)">HTML</li>
+    <li onclick="loadLesson(4)">CSS</li>
+    <li onclick="loadLesson(5)">JavaScript</li>
+    <li onclick="loadLesson(15)">Python</li>
+    <li onclick="loadLesson(7)">Banco de Dados</li>
+    <li onclick="loadLesson(8)">Projeto para Portfólio: Lista de Tarefas</li>
+    <li onclick="loadLesson(9)">Version Control com Git</li>
+    <li onclick="loadLesson(10)">Ferramentas Essenciais para Desenvolvedores</li>
+    <li onclick="loadLesson(11)">Como Conseguir o Primeiro Estágio</li>
+    <li onclick="loadLesson(12)">Habilidades Comportamentais (Soft Skills)</li>
+    <li onclick="loadLesson(13)">Próximos Passos e Recursos</li>
+    <li onclick="loadLesson(14)" class="sub-item">└─ Avaliação Final do Curso</li>
+
+  </ul>
+  <a href="certificate.html" class="cert-button">Emitir Certificado</a>
+</aside>
+
+<main class="content" id="content">
+  <h2>Bem-vindo ao curso</h2>
+  <p>
+    Este curso foi criado para te levar do zero absoluto
+    até o ponto onde você está pronto para se candidatar
+    ao seu primeiro estágio em programação.
+  </p>
+  <p>
+    Imagine começar sem saber nada sobre código e, em poucas semanas, criar aplicações web completas, automatizar tarefas com Python e ter projetos impressionantes no seu portfólio. Esse é o caminho que você vai percorrer aqui. Não importa se você nunca escreveu uma linha de código antes – este curso foi desenvolvido especificamente para iniciantes, com explicações passo a passo, exemplos práticos e exercícios que constroem sua confiança gradualmente.
+  </p>
+  <p>
+    O mercado de tecnologia está crescendo rapidamente, e empresas estão desesperadas por jovens talentosos como você. Com dedicação e seguindo este material estruturado, você não apenas aprenderá a programar, mas também entenderá como as empresas funcionam, como se preparar para entrevistas e como se destacar em um currículo competitivo. Este não é apenas um curso técnico – é um guia completo para transformar sua carreira e entrar no mundo da programação com o pé direito.
+  </p>
+</main>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Marcar lições visualizadas
+  document.addEventListener('DOMContentLoaded', function() {
+    const progress = JSON.parse(localStorage.getItem('courseProgress')) || [];
+    progress.forEach(id => {
+      const li = document.querySelector(`li[onclick*="loadLesson(${id})"]`);
+      if (li) {
+        li.classList.add('completed');
+      }
+    });
+  });
+</script>
+</body>
+</html>
