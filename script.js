@@ -17,7 +17,7 @@ const lessons = {
       <li><strong>Fundamentos Técnicos:</strong> HTML, CSS e JavaScript - as bases de qualquer site moderno</li>
       <li><strong>Automação:</strong> Python - linguagem poderosa para automação de tarefas</li>
       <li><strong>Banco de Dados:</strong> Introdução a SQL e conceitos de persistência de dados</li>
-      <li><strong>Projetos Práticos:</strong> Criar aplicações reais que impressionarão re'crutadores</li>
+      <li><strong>Projetos Práticos:</strong> Criar aplicações reais que impressionarão recrutadores</li>
       <li><strong>Version Control:</strong> Git e GitHub para gerenciar seu código profissionalmente</li>
       <li><strong>Ferramentas Essenciais:</strong> Editores, navegadores e ferramentas que todo dev usa</li>
       <li><strong>Soft Skills:</strong> Habilidades comportamentais para o mercado de trabalho</li>
@@ -28,6 +28,7 @@ const lessons = {
     <p>
       <strong>Pré-requisitos:</strong> Nenhum! Este curso parte do zero. Você só precisa de um computador, conexão com internet e vontade de aprender.
     </p>
+    <br>
     <p>
       <strong>Como usar este curso:</strong>
     </p>
@@ -78,24 +79,82 @@ const lessons = {
       <h3>Conceitos Fundamentais</h3>
       <ul>
         <li><strong>Algoritmo:</strong> Sequência finita de passos bem definidos para resolver um problema. Exemplo: receita de bolo</li>
-        <li><strong>Linguagem de Programação:</strong> Ferramenta que usamos para escrever algoritmos de forma que computadores entendam. HTML, CSS e JavaScript são linguagens</li>
+        <li><strong>Linguagem de Programação:</strong> Ferramenta que usamos para escrever algoritmos de forma que computadores entendam. Exemplo: JavaScript, Python, Java, TypeScript e C# são linguagens</li>
+        <li><strong>Linguagem de marcação:</strong> Linguagem usada para estruturar conteúdo em documentos web. Exemplo: HTML</li>
+        <li><strong>Linguagem de Estilo:</strong> Linguagem usada para definir a aparência visual de documentos web. Exemplo: CSS</li>
+        <li><strong>Função:</strong> Bloco de código reutilizável que realiza uma tarefa específica (como uma mini-receita)</li>
+        <li><strong>Variável:</strong> Espaço na memória para armazenar dados (como uma caixa com etiqueta)</li>
+        <li><strong>Compilador/Interpretador:</strong> Programa que traduz o código que escrevemos para linguagem de máquina (0s e 1s)</li>
         <li><strong>Sintaxe:</strong> Regras gramaticais da linguagem (como pontuação em português)</li>
         <li><strong>Lógica de Programação:</strong> Raciocínio para resolver problemas passo a passo</li>
       </ul>
       <h3>Front-end vs Back-end</h3>
       <p>
-        <strong>Front-end (Parte Visível):</strong> O que o usuário vê e interage no navegador. Nosso foco principal.
+        <strong>Front-end (Parte Visível):</strong> O que o usuário vê e interage no navegador.
       </p>
+      <p style="font-size: 1.05em;">
+        <strong>Principais linguagens em Front-end:</strong>
+      </p>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; font-size: 1rem;">
+        <div style="text-align: center;">
+          <i class="fa-brands fa-html5" style="font-size: 2.5rem; color: #e34c26;"></i>
+          <p style="margin: 0.5rem 0 0;">HTML</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-css3-alt" style="font-size: 2.5rem; color: #1572b6;"></i>
+          <p style="margin: 0.5rem 0 0;">CSS</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-js" style="font-size: 2.5rem; color: #f7df1e;"></i>
+          <p style="margin: 0.5rem 0 0;">JavaScript</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-react" style="font-size: 2.5rem; color: #61dafb;"></i>
+          <p style="margin: 0.5rem 0 0;">React</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-vuejs" style="font-size: 2.5rem; color: #4fc08d;"></i>
+          <p style="margin: 0.5rem 0 0;">Vue.js</p>
+        </div>
+      </div>
       <br>
+      <p>
+        <strong>Porém, Nosso foco principal será:</strong>
+      </p>
       <ul>
-        <li>HTML: Estrutura o conteúdo (ossos do corpo)</li>
-        <li>CSS: Define aparência e layout (roupas e maquiagem)</li>
-        <li>JavaScript: Adiciona interatividade (movimentos e ações)</li>
+        <li><strong><i class="fa-brands fa-html5" style="color: #e34c26;"></i> HTML:</strong> Estrutura o conteúdo (ossos do corpo)</li>
+        <li><strong><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS:</strong> Define aparência e layout (roupas e maquiagem)</li>
+        <li><strong><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript:</strong> Adiciona interatividade (movimentos e ações)</li>
       </ul>
       <br>
       <p>
-        <strong>Back-end (Parte Oculta):</strong> Servidores, bancos de dados, lógica de negócio. Geralmente aprendido depois.
+        <strong>Back-end (Parte Oculta):</strong> Servidores, bancos de dados, lógica de negócio que roda nos servidores.
       </p>
+      <p style="font-size: 1.05em;">
+        <strong>Principais linguagens em Back-end:</strong>
+      </p>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; font-size: 1rem;">
+        <div style="text-align: center;">
+          <i class="fa-brands fa-python" style="font-size: 2.5rem; color: #3776ab;"></i>
+          <p style="margin: 0.5rem 0 0;">Python</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-node-js" style="font-size: 2.5rem; color: #68a063;"></i>
+          <p style="margin: 0.5rem 0 0;">Node.js</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-java" style="font-size: 2.5rem; color: #007396;"></i>
+          <p style="margin: 0.5rem 0 0;">Java</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-brands fa-php" style="font-size: 2.5rem; color: #777bb4;"></i>
+          <p style="margin: 0.5rem 0 0;">PHP</p>
+        </div>
+        <div style="text-align: center;">
+          <i class="fa-solid fa-database" style="font-size: 2.5rem; color: #336791;"></i>
+          <p style="margin: 0.5rem 0 0;">SQL</p>
+        </div>
+      </div>
       <h3>Como um Site Funciona</h3>
       <p>
         Quando você digita um endereço no navegador:
@@ -113,9 +172,11 @@ const lessons = {
       </p>
 
        <h3>Paradigmas de Programação</h3>
-      <p>
+        <p>
         Existem diferentes estilos ou "paradigmas" de programação, que são abordagens para organizar e escrever código. Cada um tem suas vantagens e é adequado para diferentes tipos de problemas.
       </p>
+       <img src="imagens/parad.png" alt="Paradigmas de Programação" style="max-width: 100%; height: auto; margin: 1rem 0;">
+     
       <br>
       <h4>Programação Procedural</h4>
       <p>
@@ -147,6 +208,7 @@ const lessons = {
       <p>
         Os 4 pilares da programação geralmente se referem à Programação Orientada a Objetos (POO), que são essenciais para organizar, reutilizar e gerenciar código de forma eficiente, permitindo representar entidades do mundo real em software.
       </p>
+      <img src="imagens/pilares.jpg" alt="Pilares da POO" style="max-width: 100%; height: auto; margin: 1rem 0;">
       <br>
       <h4>1. Abstração</h4>
       <p>
@@ -172,6 +234,7 @@ const lessons = {
         Embora nosso foco seja JavaScript (que suporta POO), esses conceitos são universais e fundamentais para qualquer linguagem de programação moderna.
       </p>
       <h3>Exemplo Prático: Algoritmo Simples</h3>
+      <img src="imagens/pensar.jpg" alt="Exemplo de Algoritmo" style="max-width: 20%; height: auto; margin: 1rem 0;">
       <p>
         <strong>Problema:</strong> Fazer um sanduíche
       </p>
@@ -226,30 +289,77 @@ const lessons = {
   &lt;p&gt;Este é meu primeiro site.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+      <img src="imagens/olamundo1.png" alt="Estrutura HTML" style="max-width: 40%; height: auto; margin: 1rem 0;">
       <h3>Elementos HTML Essenciais</h3>
-      <ul>
-        <li><code>&lt;h1&gt; a &lt;h6&gt;</code>: Títulos (h1 é o mais importante para SEO)</li>
-        <li><code>&lt;p&gt;</code>: Parágrafos de texto</li>
-        <li><code>&lt;a href="url"&gt;</code>: Links para outras páginas</li>
-        <li><code>&lt;img src="imagem.jpg" alt="descrição"&gt;</code>: Imagens (alt é obrigatório para acessibilidade)</li>
-        <li><code>&lt;ul&gt; e &lt;li&gt;</code>: Listas não ordenadas</li>
-        <li><code>&lt;ol&gt; e &lt;li&gt;</code>: Listas ordenadas</li>
-        <li><code>&lt;div&gt;</code>: Container genérico para agrupar elementos</li>
-        <li><code>&lt;span&gt;</code>: Container inline para texto</li>
-      </ul>
+      <p>1. <code>&lt;h1&gt; a &lt;h6&gt;</code>: Títulos (h1 é o mais importante para SEO)</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;h1&gt;Bem-vindo ao meu site&lt;/h1&gt;</code></pre>
+      <img src="imagens/h1bemvindo.png" alt="Exemplo de Título" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>2. <code>&lt;p&gt;</code>: Parágrafos de texto</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;p&gt;Este é um parágrafo com conteúdo de texto.&lt;/p&gt;</code></pre>
+      <img src="imagens/p.png" alt="Exemplo de Parágrafo" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>3.<code>&lt;a href="url"&gt;</code>: Links para outras páginas</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;a href="https://google.com"&gt;Clique aqui&lt;/a&gt;</code></pre>
+      <video src="imagens/MeuPrimeiroSite.mp4" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
+      <p>4.<code>&lt;img src="imagem.jpg" alt="descrição"&gt;</code>: Imagens (alt é obrigatório para acessibilidade)</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;img src="foto.jpg" alt="Foto do perfil"&gt;</code></pre>
+      <img src="imagens/fotoperfil.png" alt="Exemplo de Imagem" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>5. <code>&lt;ul&gt; e &lt;li&gt;</code>: Listas não ordenadas</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ul&gt;</code></pre>
+      <img src="imagens/ul.png" alt="Exemplo de Lista Não Ordenada" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>6. <code>&lt;ol&gt; e &lt;li&gt;</code>: Listas ordenadas</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;ol&gt;&lt;li&gt;Primeiro&lt;/li&gt;&lt;li&gt;Segundo&lt;/li&gt;&lt;/ol&gt;</code></pre>
+      <img src="imagens/li.png" alt="Exemplo de Lista Ordenada" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>7. <code>&lt;div&gt;</code>: Container genérico para agrupar elementos</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;div class="container"&gt;&lt;p&gt;Conteúdo do container&lt;/p&gt;&lt;/div&gt;</code></pre>
+      <img src="imagens/div.png" alt="Exemplo de Div" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>8. <code>&lt;span&gt;</code>: Container inline para texto</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;p&gt;Texto normal &lt;span style="color: red;"&gt;texto colorido&lt;/span&gt;&lt;/p&gt;</code></pre>
+      <img src="imagens/span.png" alt="Exemplo de Span" style="max-width: 40%; height: auto; margin: 1rem 0;">
       <h3>HTML Semântico</h3>
       <p>
         Use elementos semânticos para melhor acessibilidade, SEO e manutenibilidade:
       </p>
-      <ul>
-        <li><code>&lt;header&gt;</code>: Cabeçalho da página</li>
-        <li><code>&lt;nav&gt;</code>: Navegação</li>
-        <li><code>&lt;main&gt;</code>: Conteúdo principal</li>
-        <li><code>&lt;section&gt;</code>: Seções do conteúdo</li>
-        <li><code>&lt;article&gt;</code>: Conteúdo independente</li>
-        <li><code>&lt;aside&gt;</code>: Conteúdo relacionado</li>
-        <li><code>&lt;footer&gt;</code>: Rodapé</li>
-      </ul>
+      <p>9. <code>&lt;header&gt;</code>: Cabeçalho da página</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;header&gt;&lt;h1&gt;Meu Site&lt;/h1&gt;&lt;/header&gt;</code></pre>
+      <img src="imagens/meusite.png" alt="Exemplo de Header" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>10. <code>&lt;nav&gt;</code>: Navegação</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;nav&gt;&lt;a href="/"&gt;Início&lt;/a&gt;&lt;a href="/sobre"&gt;Sobre&lt;/a&gt;&lt;/nav&gt;</code></pre>
+      <img src="imagens/nav.png" alt="Exemplo de Nav" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>11. <code>&lt;main&gt;</code>: Conteúdo principal</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;main&gt;&lt;h2&gt;Conteúdo Principal&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/main&gt;</code></pre>
+      <img src="imagens/main.png" alt="Exemplo de Main" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>12. <code>&lt;section&gt;</code>: Seções do conteúdo</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;section&gt;&lt;h2&gt;Sobre Nós&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/section&gt;</code></pre>
+      <img src="imagens/section.png" alt="Exemplo de Section" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>13. <code>&lt;article&gt;</code>: Conteúdo independente</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;article&gt;&lt;h2&gt;Meu Artigo&lt;/h2&gt;&lt;p&gt;Conteúdo...&lt;/p&gt;&lt;/article&gt;</code></pre>
+      <img src="imagens/article.png" alt="Exemplo de Article" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>14. <code>&lt;aside&gt;</code>: Conteúdo relacionado</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;aside&gt;&lt;h3&gt;Links Úteis&lt;/h3&gt;&lt;ul&gt;...&lt;/ul&gt;&lt;/aside&gt;</code></pre>
+      <img src="imagens/aside.png" alt="Exemplo de Aside" style="max-width: 40%; height: auto; margin: 1rem 0;">
+      <p>15. <code>&lt;footer&gt;</code>: Rodapé</p>
+      <p><strong>Exemplo:</strong></p>
+      <pre><code>&lt;footer&gt;&lt;p&gt;&copy; 2026 Meu Site&lt;/p&gt;&lt;/footer&gt;</code></pre>
+      <img src="imagens/footer.png" alt="Exemplo de Footer" style="max-width: 40%; height: auto; margin: 1rem 0;"> 
+      <h3 style="color: blue;"> Ao final a página fica dessa forma sem estilização e totalmente genérico, e é nessa parte que entra o css para "enfeitar" tudo isso e deixa com estilo e cores.</h3>
+      <img src="imagens/aofinal.png" alt="HTML Semântico" style="max-width: 100%; height: auto; margin: 1rem 0;">
+     
+      
+
       <h3>Formulários HTML</h3>
       <p>
         Formulários são essenciais para interação com usuários:
@@ -264,6 +374,7 @@ const lessons = {
   
   &lt;button type="submit"&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;</code></pre>
+<img src="imagens/form.png" alt="Exemplo de Formulário" style="max-width: 40%; height: auto; margin: 1rem 0;">
       <h3>Atributos Importantes</h3>
       <ul>
         <li><code>id</code>: Identificador único do elemento</li>
@@ -289,6 +400,7 @@ const lessons = {
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+<img src="imagens/table.png" alt="Exemplo de Tabela" style="max-width: 40%; height: auto; margin: 1rem 0;">
       <h3>Exercício Prático</h3>
       <p>
         Crie um arquivo HTML completo com:
@@ -302,11 +414,20 @@ const lessons = {
       <p>
         <strong>Dica:</strong> Use a extensão Live Server no VS Code para visualizar seu HTML em tempo real.
       </p>
+      <img src="imagens/liveserver.png" alt="Exercício Prático HTML" style="max-width: 40%; height: auto; margin: 1rem 0;">
       <h3>Recursos Adicionais</h3>
       <ul>
         <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
         <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
       </ul>
+      <h3>Caso queira saber mais profundamente sobre HTML recomendo assistir esse vídeo abaixo:</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Fhy-5CtVkiM?si=LKc-r0EZ70J-4-DE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Recursos para Aprender Mais</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs - HTML</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
+      </ul>
+
     `,
 
     4: `
@@ -336,10 +457,13 @@ const lessons = {
         <li><code>:pseudo-classe</code>: Estados especiais (:hover, :focus)</li>
         <li><code>::pseudo-elemento</code>: Partes do elemento (::before, ::after)</li>
       </ul>
+      <p>Abaixo há um vídeo explicando os seletores de forma prática:</p>
+      <video src="imagens/videoSeletores-trim.mp4" style="max-width: 100%; height: auto; margin: 1rem 0;" controls></video>
       <h3>Box Model</h3>
       <p>
         Todo elemento HTML é uma caixa retangular composta por:
       </p>
+      <img src="imagens/box_model.png" alt="Box Model" style="max-width: 50%; height: auto; margin: 1rem 0;">
       <ul>
         <li><strong>Content:</strong> Conteúdo do elemento</li>
         <li><strong>Padding:</strong> Espaço interno entre content e border</li>
@@ -471,6 +595,8 @@ h1 {
         <li>Organize CSS em seções lógicas</li>
         <li>Teste em diferentes navegadores</li>
       </ul>
+      <h3>Caso queira saber mais profundamente sobre CSS recomendo assistir esse vídeo abaixo:</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/AB35iSr1YyA?si=Vroa4ozyAMpamJHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>Recursos para Aprender Mais</h3>
       <ul>
         <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">MDN Web Docs - CSS</a></li>
@@ -663,6 +789,8 @@ document.body.appendChild(novoParagrafo);</code></pre>
         <li>Validação de formulário</li>
         <li>Toggle para mostrar/ocultar conteúdo</li>
       </ul>
+      <h3>Caso queira saber mais profundamente sobre JavaScript recomendo assistir esse vídeo abaixo:</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Z7mnxUI4u00?si=X2vrHj8sW3ew4H2a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>Recursos para Aprender Mais</h3>
       <ul>
         <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a></li>
@@ -978,6 +1106,8 @@ if __name__ == '__main__':
         <li>Pratique em plataformas como LeetCode ou HackerRank</li>
         <li>Contribua para projetos open source</li>
       </ul>
+      <h3>Caso queira saber mais profundamente sobre Python, recomendo assistir esse vídeo abaixo:</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4p7axLXXBGU?si=rbk7awIy775_hIAl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>Recursos</h3>
       <ul>
         <li><a href="https://www.python.org/" target="_blank">Site oficial do Python</a></li>
@@ -1026,59 +1156,62 @@ if __name__ == '__main__':
 &lt;body&gt;
   &lt;div class="container"&gt;
     &lt;h1&gt;📝 Lista de Tarefas&lt;/h1&gt;
-    
     &lt;div class="input-group"&gt;
       &lt;input type="text" id="novaTarefa" placeholder="Digite uma nova tarefa..."&gt;
-      &lt;button id="adicionar"&gt;➕ Adicionar&lt;/button&gt;
+      &lt;button id="adicionar"&gt;+&lt;/button&gt;
     &lt;/div&gt;
-    
+
     &lt;div class="filtros"&gt;
       &lt;button class="filtro ativo" data-filtro="todas"&gt;TODAS&lt;/button&gt;
       &lt;button class="filtro" data-filtro="pendentes"&gt;PENDENTES&lt;/button&gt;
       &lt;button class="filtro" data-filtro="concluidas"&gt;CONCLUÍDAS&lt;/button&gt;
     &lt;/div&gt;
-    
     &lt;ul id="listaTarefas"&gt;&lt;/ul&gt;
-    
     &lt;div class="estatisticas"&gt;
       &lt;span id="totalTarefas"&gt;0 tarefas&lt;/span&gt;
       &lt;span id="tarefasConcluidas"&gt;0 concluídas&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  
   &lt;script src="script.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
       <h3>Passo 3: CSS Moderno</h3>
       <p>CSS (Cascading Style Sheets) controla a aparência visual da página, definindo cores, layouts, fontes e responsividade. Usamos seletores para aplicar estilos a elementos HTML, propriedades como flexbox para layouts modernos, e media queries para adaptar a designs móveis. Um CSS bem estruturado torna a interface atrativa e funcional em diferentes dispositivos.</p>
-      <pre><code>* {
+      <pre><code>@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "Montserrat", sans-serif;
+  background: #163666;
   min-height: 100vh;
   padding: 20px;
+  
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
   background: white;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 
+
 h1 {
-  background: #2c3e50;
-  color: white;
+  background: none;
+  font-family: "Montserrat", sans-serif;
+  color: #163666;
   padding: 20px;
   text-align: center;
   font-size: 1.8rem;
+  border-bottom: 1px solid #163666;
 }
 
 .input-group {
@@ -1130,7 +1263,7 @@ button {
   padding: 10px 15px;
   background: #f8f9fa;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 14px;
 }
 
@@ -1235,9 +1368,9 @@ function criarElementoTarefa(tarefa) {
   li.dataset.id = tarefa.id;
   
   li.innerHTML = \`
-    &lt;input type="checkbox" class="checkbox" \${tarefa.concluida ? 'checked' : ''}&gt;
-    &lt;span class="texto-tarefa"&gt;\${tarefa.texto}&lt;/span&gt;
-    &lt;button class="delete-btn"&gt;🗑️&lt;/button&gt;
+    &lt;input type="checkbox" class="checkbox" \${tarefa.concluida ? 'checked' : ''}>&gt;
+    &lt;span class="texto-tarefa">&gt;\${tarefa.texto}&lt;/span>&gt;
+    &lt;button class="delete-btn" style="font-family: 'Montserrat', sans-serif;">&gt;X&lt;/button>&gt;
   \`;
   
   // Eventos
@@ -1332,17 +1465,17 @@ filtros.forEach(filtro => {
 
 // Inicialização
 renderizarTarefas();</code></pre>
-      <h3>Passo 5: Melhorias Avançadas</h3>
+      <h3>Passo 5: Exercício prático para Melhorias Avançadas</h3>
       <ul>
         <li>Adicione drag and drop para reordenar tarefas</li>
         <li>Implemente edição inline de tarefas</li>
         <li>Adicione categorias/prioridades</li>
-        <li>Integre com uma API externa</li>
+        <li>Estilize o projeto com CSS da forma que preferir</li>
         <li>Adicione notificações push</li>
       </ul>
       <h3>Passo 6: Deploy e Portfólio</h3>
       <ul>
-        <li>Hospede no GitHub Pages ou Netlify</li>
+        <li>Hospede no <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> ou <a href="https://www.netlify.com/" target="_blank">Netlify</a></li>
         <li>Adicione ao seu README.md</li>
         <li>Inclua screenshots no portfólio</li>
         <li>Descreva as tecnologias usadas</li>
@@ -1441,7 +1574,7 @@ git clone https://github.com/usuario/repo.git</code></pre>
       </ul>
       <h3>Fluxo de Trabalho Profissional</h3>
       <ol>
-        <li>Clone o repositório: <code>git clone url</code></li>
+        <li>Clone o repositório: <code>git clone +url do projeto</code></li>
         <li>Crie uma branch para sua feature: <code>git checkout -b feature/nova-funcionalidade</code></li>
         <li>Faça commits pequenos e descritivos</li>
         <li>Push sua branch: <code>git push origin feature/nova-funcionalidade</code></li>
@@ -1495,6 +1628,8 @@ Thumbs.db
         <li>Adicione uma nova funcionalidade e faça commit</li>
         <li>Volte para main e mescle: <code>git checkout main && git merge feature/improvements</code></li>
       </ul>
+      <h4>Abaixo um vídeo explicativo para criação de repositório no GitHub:</h4>
+      <video src="imagens/githubVideo.mp4" title="video" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
       <h3>Dicas para Entrevistas</h3>
       <ul>
         <li>Sempre use commits descritivos em português ou inglês</li>
@@ -1522,6 +1657,8 @@ Thumbs.db
       <ul>
         <li>Baixe em: <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a></li>
         <li>Instale extensões essenciais:
+        <h4 style="color: #007acc;">*Para instalar extensões basta seguir os passos da imagem abaixo, clicar no icone a esquerda, pesquisar pela extensão que deseja e logo após instalar.*</h4>
+        <img src="./imagens/liveServer.png" alt="VS Code Extensions" style="max-width: 100%; height: auto;">
           <ul>
             <li>HTML CSS Support</li>
             <li>JavaScript (ES6) code snippets</li>
@@ -1565,6 +1702,7 @@ Thumbs.db
       </p>
       <ul>
         <li>Perfil profissional no GitHub</li>
+        <img src="./imagens/meuGithub2.png" alt="GitHub Profile" style="max-width: 100%; height: auto;">
         <li>README.md bem escrito para projetos</li>
         <li>GitHub Pages para hospedar sites gratuitamente</li>
         <li>Contribuições para projetos open source</li>
@@ -1614,10 +1752,10 @@ Thumbs.db
       </ul>
       <h3>Exercício Prático</h3>
       <ul>
-        <li>Instale VS Code e configure as extensões recomendadas</li>
-        <li>Explore as DevTools do Chrome</li>
-        <li>Crie uma conta no GitHub e configure seu perfil</li>
-        <li>Instale Node.js e npm</li>
+        <li>Instale <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> e configure as extensões recomendadas</li>
+        <li>Explore as DevTools (tecla F12 no teclado) do Chrome</li>
+        <li>Crie uma conta no <a href="https://github.com/" target="_blank">GitHub</a> e configure seu perfil</li>
+        <li>Instale <a href="https://nodejs.org/" target="_blank">Node.js</a> e npm</li>
         <li>Configure Prettier e ESLint no VS Code</li>
         <li>Explore pelo menos 3 ferramentas de design</li>
       </ul>
@@ -1905,6 +2043,7 @@ Thumbs.db
       <p>
         <strong>Contato e Suporte:</strong> Se tiver dúvidas, entre em contato. Lembre-se: todo expert já foi iniciante. Boa sorte na sua jornada!
       </p>
+      
       <h3>Checklist Final</h3>
       <ul>
         <li>✅ Completei o curso básico</li>
@@ -2095,6 +2234,8 @@ connection.execute(
         <li>Explore bancos NoSQL para projetos modernos</li>
         <li>Estude design de banco de dados e modelagem</li>
       </ul>
+      <h3>Abaixo um Vídeo Explicativo sobre Banco de Dados e criação de tabelas.</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8FTQ_kfTfPE?si=6x39YEqa6RXv7re8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>Recursos para Aprender Mais</h3>
       <ul>
         <li><a href="https://sqlzoo.net/" target="_blank">SQLZoo - Pratique SQL online</a></li>
@@ -2643,83 +2784,8 @@ function generateCertificate() {
     return;
   }
 
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({
-    orientation: 'landscape',
-    unit: 'mm',
-    format: 'a4'
-  });
-
-  const primaryColor = [59, 130, 246]; 
-  const secondaryColor = [16, 185, 129]; 
-  const textColor = [31, 41, 55]; 
-
-  doc.setFillColor(248, 250, 252);
-  doc.rect(0, 0, 297, 210, 'F');
-
-  doc.setDrawColor(...primaryColor);
-  doc.setLineWidth(2);
-  doc.rect(10, 10, 277, 190);
-
-  doc.setDrawColor(...secondaryColor);
-  doc.setLineWidth(1);
-  doc.rect(15, 15, 267, 180);
-
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(28);
-  doc.setTextColor(...primaryColor);
-  doc.text('CERTIFICADO DE CONCLUSÃO', 148.5, 35, { align: 'center' });
-
-  doc.setDrawColor(...secondaryColor);
-  doc.setLineWidth(1);
-  doc.line(60, 42, 237, 42);
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(16);
-  doc.setTextColor(...textColor);
-  doc.text('Aprendendo programação do 0', 148.5, 55, { align: 'center' });
-
-  doc.setFontSize(14);
-  doc.text('Certificamos que', 148.5, 75, { align: 'center' });
-
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(24);
-  doc.setTextColor(...primaryColor);
-  doc.text(nome.toUpperCase(), 148.5, 90, { align: 'center' });
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(14);
-  doc.setTextColor(...textColor);
-  doc.text('concluiu com êxito o curso de Desenvolvimento Web Front-end,', 148.5, 105, { align: 'center' });
-  doc.text('demonstrando proficiência em HTML, CSS, JavaScript e Python.', 148.5, 115, { align: 'center' });
-
-  const dataAtual = new Date().toLocaleDateString('pt-BR', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric'
-  });
-  doc.text(`Emitido em ${dataAtual}`, 148.5, 135, { align: 'center' });
-
-  doc.setFontSize(12);
-  doc.text('Guilherme Carvalho', 75, 160, { align: 'center' });
-  doc.text('Instrutor e Desenvolvedor Full Stack', 75, 170, { align: 'center' });
-
-  const titleWidth = doc.getTextWidth('Instrutor e Desenvolvedor Full Stack');
-  const lineStart = 75 - titleWidth / 2;
-  const lineEnd = 75 + titleWidth / 2;
-
-  doc.setDrawColor(...textColor);
-  doc.setLineWidth(0.5);
-  doc.line(lineStart, 175, lineEnd, 175);
-
-  const codigoVerificacao = 'CERT-' + Date.now().toString().slice(-8);
-  doc.setFontSize(10);
-  doc.setTextColor(100, 116, 139);
-  doc.text(`Código de Verificação: ${codigoVerificacao}`, 148.5, 185, { align: 'center' });
-
-  doc.save(`certificado_${nome.replace(/\s+/g, '_').toLowerCase()}.pdf`);
-  
-  alert('Certificado profissional gerado com sucesso! O download deve começar automaticamente.');
+  // Certificado validado com sucesso
+  alert('Certificado validado com sucesso! Acesse a página de certificado para fazer o download.');
 }
 
 function startQuiz(lessonId) {

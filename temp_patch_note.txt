@@ -1,0 +1,1 @@
+Patch: add small cards for 'Para quem é este curso?' and 'Resultado final' and add .small-card CSS.

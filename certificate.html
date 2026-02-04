@@ -4,107 +4,627 @@
   <meta charset="UTF-8">
   <title>Certificado - Primeiro Estágio em Programação</title>
   <link rel="icon" href="./imagens/startdevv.jpg" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #052350 0%, #2d0457 100%);
+      padding: 20px;
+    }
+
+    .certificado-container {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #081a4f 0%, #0e2157 100%);
+      border: 8px solid #af8f27;
+      border-radius: 5px;
+      padding: 20px 40px 40px 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Fundo azul sutil */
+    .certificado-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .certificado-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .certificado-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 90px;
+      max-height: 90px;
+    }
+
+    .titulo-certificado {
+      flex: 1;
+      text-align: center;
+    }
+
+    .titulo-certificado h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 40px;
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .titulo-certificado p {
+      font-size: 15px;
+      color: #e0e0e0;
+      font-style: italic;
+    }
+
+    .selo {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .selo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 90px;
+      max-height: 90px;
+    }
+
+    .certificado-body {
+      margin: 10px 0;
+    }
+
+    .aluno-nome {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .texto-certificado {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      color: #ffffff;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .progresso-info {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-left: 4px solid #d4af37;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #ffffff;
+    }
+
+    .progresso-info strong {
+      color: #ffd700;
+    }
+
+    .certificado-footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      border-top: 2px solid #d4af37;
+      padding-top: 20px;
+    }
+
+    .assinatura {
+      text-align: center;
+      flex: 1;
+      color: #d4af37;
+    }
+
+    .assinatura-linha {
+      border-top: 2px solid #ffffff;
+      width: 150px;
+      margin: 5px auto 5px;
+    }
+
+    .assinatura-texto {
+      font-size: 12px;
+      color: #ffffff;
+    }
+
+    .data-emissao {
+      text-align: right;
+      font-size: 12px;
+      color: #ffffff;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .certificado-container {
+        max-width: 100%;
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .btn-print {
+        display: none;
+      }
+
+      .btn-download {
+        display: none;
+      }
+    }
+
+    .btn-print {
+      position: fixed;
+      bottom: 20px;
+      right: 140px;
+      padding: 12px 24px;
+      background: #d4af37;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: #1E3A8A;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+
+    .btn-print:hover {
+      background: #ffd700;
+    }
+
+    .btn-download {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 24px;
+      background: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: #1E3A8A;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+
+    .btn-download:hover {
+      background: #e8e8e8;
+    }
+
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .controls button {
+      padding: 10px 20px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .controls button:hover {
+      background: #2563eb;
+    }
+
+    .form-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-container input {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: 2px solid #3b82f6;
+      border-radius: 8px;
+      margin-right: 10px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .form-container button {
+      padding: 10px 20px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .form-container button:hover {
+      background: #2563eb;
+    }
+  </style>
 </head>
 <body>
 
-<header class="hero">
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="curso.html">Curso</a>
-    <a href="about.html">Sobre</a>
-    <a href="pricing.html">Preços</a>
-    <a href="contact.html">Contato</a>
-  </nav>
-  <h1>Certificado de Conclusão</h1>
-</header>
+<div class="form-container">
+  <label for="nome">Seu Nome Completo:</label>
+  <input type="text" id="nome" placeholder="Digite seu nome" required>
+  <button onclick="updateCertificado()">Atualizar Certificado</button>
+  <p style="color: white;">*Obs: Preste atenção na hora de preencher seu nome no certificado, pois ele pode ser emitido apenas UMA vez*</p>
+</div>
 
-<section class="section">
-  <h2>Parabéns por Completar o Curso!</h2>
-  <div id="progressInfo" style="margin-bottom: 20px; padding: 15px; background: #f0f8ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
-    <p><strong>Seu Progresso:</strong> <span id="progressText">Carregando...</span></p>
-  </div>
-  <p>Preencha seu nome abaixo e clique em "Gerar Certificado" para baixar seu certificado em PDF.</p>
-  
-  <div class="certificate-form">
-    <div class="form-group">
-      <label for="nome">Seu Nome Completo:</label>
-      <input type="text" id="nome" placeholder="Digite seu nome" required>
-    </div>
-    
-    <button id="generateCert" class="btn">Gerar Certificado</button>
-  </div>
-  
-  <div id="certPreview" style="display: none; margin-top: 20px;">
-    <h3>Prévia do Certificado:</h3>
-    <div id="certContent" style="border: 2px solid #3b82f6; padding: 30px; max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <div style="text-align: center; border: 3px double #3b82f6; padding: 20px; background: white; border-radius: 10px;">
-        <h1 style="color: #3b82f6; margin: 0; font-size: 32px; font-weight: bold;">CERTIFICADO DE CONCLUSÃO</h1>
-        <div style="width: 200px; height: 2px; background: #10b981; margin: 10px auto;"></div>
-        <h2 style="color: #374151; margin: 10px 0; font-size: 20px;">Aprendendo programação do 0</h2>
-        <p style="font-size: 16px; margin: 20px 0;">Certificamos que</p>
-        <h3 id="previewNome" style="color: #3b82f6; font-size: 28px; margin: 15px 0; text-transform: uppercase;">[Seu Nome]</h3>
-        <p style="font-size: 16px; line-height: 1.6; margin: 15px 0;">
-          concluiu com êxito o curso de Desenvolvimento Web Front-end,<br>
-          demonstrando proficiência em HTML, CSS, JavaScript e Python.
-        </p>
-        <p id="previewData" style="font-size: 14px; margin: 20px 0; color: #6b7280;">Emitido em [Data]</p>
-        <div style="display: flex; justify-content: space-around; margin-top: 40px;">
-          <div style="text-align: center;">
-            <div style="width: 150px; border-top: 1px solid #374151; margin-bottom: 5px;"></div>
-            <p style="font-size: 14px; margin: 0;">Guilherme Carvalho</p>
-            <p style="font-size: 12px; color: #6b7280;">Instrutor e Desenvolvedor Full Stack</p>
-          </div>
-        </div>
-        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
-          <p style="font-size: 12px; color: #9ca3af;">Código de Verificação: CERT-XXXXXXX</p>
-          <p style="font-size: 10px; color: #9ca3af;">Este certificado é válido e pode ser usado para mostrar em entrevistas</p>
+<div class="certificado-container">
+  <div class="certificado-content">
+    <div class="certificado-header">
+      <div class="logo">
+        <img src="./imagens/startdevv.jpg" alt="Logo DevStart">
+      </div>
+      <div class="titulo-certificado">
+        <h1>CERTIFICADO</h1>
+        <p>de Conclusão</p>
+      </div>
+      <div class="selo">
+        <div style="width: 100px; height: 100px; ">
+          <img src="./imagens/BASIC-removebg-preview.png" alt="">
         </div>
       </div>
     </div>
+
+    <div class="certificado-body">
+      <div class="progresso-info">
+        <strong id="progressText">Carregando...</strong>
+        <p id="dataEmissaoTop" style="color: #ffd700;">Concluído em [Data]</p>
+      </div>
+      
+      <p class="texto-certificado">Certificamos que</p>
+      
+      <h2 class="aluno-nome" id="certNome">[Seu Nome]</h2>
+      
+      <p class="texto-certificado">
+        concluiu com êxito o curso DevStart de<br>
+        <strong>Desenvolvimento Web Front-end do zero ao primeiro estágio</strong><br>
+        demonstrando proficiência em HTML, CSS, JavaScript, Python, Banco de Dados, Git & GitHub.
+      </p>
+    </div>
+
+    <div class="certificado-footer">
+      <div class="assinatura">Guilherme Carvalho
+        <div class="assinatura-linha"></div>
+        <div class="assinatura-texto">
+          <strong></strong>
+          Instrutor e Dev. Full Stack
+        </div>
+      </div>
+      <div class="data-emissao">
+        <p id="dataEmissao">Emitido em [Data]</p>
+        <p style="font-size: 10px; color: #d4af37;">Código: CERT-2026</p>
+      </div>
+    </div>
   </div>
-</section>
+</div>
+
+<div class="controls">
+<!--  <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>-->
+  <button class="btn-download" onclick="downloadPDF()">📥 Baixar PDF</button>
+</div>
 
 <script src="script.js"></script>
 <script>
-  // Mostrar progresso
+  // Mostrar progresso e atualizar certificado
   document.addEventListener('DOMContentLoaded', function() {
     const progress = JSON.parse(localStorage.getItem('courseProgress')) || [];
-    const totalLessons = 14; // Ajuste conforme o número de lições
+    const totalLessons = 14;
     const progressText = document.getElementById('progressText');
-    progressText.textContent = `${progress.length}/${totalLessons} lições visualizadas`;
+    const certNome = document.getElementById('certNome');
+    const dataEmissao = document.getElementById('dataEmissao');
+    const dataEmissaoTop = document.getElementById('dataEmissaoTop');
     
-    if (progress.length === totalLessons) {
-      progressText.style.color = '#10b981';
-      progressText.textContent += ' - Pronto para emitir seu certificado!';
+    // Atualizar progresso
+    const porcentagem = Math.round((progress.length / totalLessons) * 100);
+    progressText.textContent = `Progresso: ${progress.length}/${totalLessons} lições (${porcentagem}%)`;
+    
+    // Atualizar data
+    const dataAtual = new Date().toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    });
+    dataEmissao.textContent = `Emitido em ${dataAtual}`;
+    dataEmissaoTop.textContent = `Concluído em ${dataAtual}`;
+
+    // Carregar nome salvo se existir
+    const nomeSalvo = localStorage.getItem('alunoNome');
+    if (nomeSalvo) {
+      document.getElementById('nome').value = nomeSalvo;
+      certNome.textContent = nomeSalvo.toUpperCase();
+    }
+  });
+
+  function updateCertificado() {
+    const nome = document.getElementById('nome').value.trim();
+    if (nome) {
+      document.getElementById('certNome').textContent = nome.toUpperCase();
+      localStorage.setItem('alunoNome', nome);
     } else {
-      progressText.style.color = '#f59e0b';
-      progressText.textContent += ' - Complete todas as lições primeiro.';
+      alert('Por favor, digite seu nome');
+    }
+  }
+
+  function downloadPDF() {
+    const nome = document.getElementById('nome').value.trim();
+    if (!nome) {
+      alert('Por favor, digite seu nome primeiro');
+      return;
     }
 
-    // Prévia do certificado
-    const nomeInput = document.getElementById('nome');
-    const previewNome = document.getElementById('previewNome');
-    const previewData = document.getElementById('previewData');
-    const certPreview = document.getElementById('certPreview');
+    // Validar progresso
+    const progress = JSON.parse(localStorage.getItem('courseProgress')) || [];
+    const uniqueProgress = [...new Set(progress.map(id => parseInt(id)))];
+    const totalLessons = 14;
+    
+    if (uniqueProgress.length < totalLessons) {
+      alert(`Você precisa visualizar todas as lições antes de emitir o certificado. Progresso atual: ${uniqueProgress.length}/${totalLessons} lições visualizadas.`);
+      return;
+    }
+    
+    // Validar avaliação final
+    const quizResults = JSON.parse(localStorage.getItem('quizResults')) || {};
+    if (!quizResults['14'] || quizResults['14'].percentage < 80) {
+      const message = !quizResults['14'] 
+        ? 'Você precisa fazer a avaliação final antes de emitir o certificado.'
+        : `Você precisa obter pelo menos 80% na avaliação final. Sua pontuação atual: ${quizResults['14'].percentage}%.`;
+      alert(message);
+      return;
+    }
 
-    nomeInput.addEventListener('input', function() {
-      const nome = nomeInput.value.trim();
-      if (nome) {
-        previewNome.textContent = nome.toUpperCase();
-        const dataAtual = new Date().toLocaleDateString('pt-BR', {
-          day: '2-digit',
-          month: 'long',
-          year: 'numeric'
-        });
-        previewData.textContent = `Emitido em ${dataAtual}`;
-        certPreview.style.display = 'block';
-      } else {
-        certPreview.style.display = 'none';
-      }
+    // Se validações passaram, fazer download do PDF
+    const element = document.querySelector('.certificado-container');
+    const opt = {
+      margin: 10,
+      filename: `Certificado_${nome}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { orientation: 'landscape', unit: 'mm', format: 'a4' }
+    };
+
+    // Fazer download e depois mostrar modal de promoção
+    html2pdf().set(opt).from(element).save().then(() => {
+      // Aguardar um pouco para o download iniciar e depois mostrar o modal
+      setTimeout(() => {
+        showPromotionModal();
+      }, 1000);
     });
-  });
+  }
+
+  function showPromotionModal() {
+    // Remover modal se já existir
+    const existingModal = document.getElementById('promotionModal');
+    if (existingModal) {
+      existingModal.remove();
+    }
+
+    // Criar modal
+    const modal = document.createElement('div');
+    modal.id = 'promotionModal';
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    `;
+
+    const modalContent = document.createElement('div');
+    modalContent.style.cssText = `
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.5s ease-out;
+    `;
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideDown {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Título
+    const title = document.createElement('h2');
+    title.textContent = '🎓 Parabéns! Certificado Emitido!';
+    title.style.cssText = `
+      color: #ffd700;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+    `;
+
+    // Mensagem principal
+    const message = document.createElement('p');
+    message.innerHTML = `
+      <strong style="color: #ffffff; font-size: 18px;">Você completou com sucesso o módulo básico!</strong><br><br>
+      <span style="color: #e0e0e0; font-size: 16px;">
+        Seu certificado foi gerado e está sendo baixado. Mas sua jornada não precisa terminar aqui!
+      </span>
+    `;
+    message.style.cssText = `
+      color: #ffffff;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-family: "Montserrat", sans-serif;
+    `;
+
+    // Destaque do módulo avançado
+    const highlight = document.createElement('div');
+    highlight.style.cssText = `
+      background: rgba(255, 215, 0, 0.1);
+      border-left: 4px solid #ffd700;
+      padding: 15px;
+      margin-bottom: 30px;
+      text-align: left;
+      border-radius: 5px;
+    `;
+    highlight.innerHTML = `
+      <p style="color: #ffd700; font-weight: bold; margin-bottom: 8px; font-size: 16px;">📚 Módulo Avançado Disponível!</p>
+      <p style="color: #e0e0e0; font-size: 14px; margin: 0;">
+        Deseje aprofundar seus conhecimentos? Conheça nosso módulo avançado com projetos complexos, arquitetura de sistemas e muito mais!
+      </p>
+    `;
+
+    // Botão WhatsApp
+    const whatsappBtn = document.createElement('a');
+    whatsappBtn.href = 'https://wa.me/5531995967395?text=Olá! Gostaria de conhecer mais sobre o módulo avançado do curso!';
+    whatsappBtn.target = '_blank';
+    whatsappBtn.style.cssText = `
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background 0.3s;
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer;
+      border: none;
+    `;
+    whatsappBtn.textContent = '💬 Fale Conosco no WhatsApp';
+    whatsappBtn.onmouseover = function() { this.style.background = '#1ead51'; };
+    whatsappBtn.onmouseout = function() { this.style.background = '#25d366'; };
+
+    // Botão Fechar
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Fechar';
+    closeBtn.style.cssText = `
+      background: transparent;
+      color: #ffffff;
+      padding: 12px 30px;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      transition: all 0.3s;
+    `;
+    closeBtn.onmouseover = function() { 
+      this.style.background = '#ffffff'; 
+      this.style.color = '#1e3c72';
+    };
+    closeBtn.onmouseout = function() { 
+      this.style.background = 'transparent'; 
+      this.style.color = '#ffffff';
+    };
+    closeBtn.onclick = function() {
+      modal.remove();
+    };
+
+    // Container dos botões
+    const buttonContainer = document.createElement('div');
+    buttonContainer.style.cssText = `
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    `;
+    buttonContainer.appendChild(whatsappBtn);
+    buttonContainer.appendChild(closeBtn);
+
+    // Montar modal
+    modalContent.appendChild(title);
+    modalContent.appendChild(message);
+    modalContent.appendChild(highlight);
+    modalContent.appendChild(buttonContainer);
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+  }
 </script>
 </body>
 </html></content>
