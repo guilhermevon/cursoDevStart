@@ -1629,7 +1629,14 @@ Thumbs.db
         <li>Volte para main e mescle: <code>git checkout main && git merge feature/improvements</code></li>
       </ul>
       <h4>Abaixo um vídeo explicativo para criação de repositório no GitHub:</h4>
-      <iframe src="https://drive.google.com/file/d/1yKPwH8YX3DTEjjCgPnIFMjsiArQeyKFy/preview" width="640" height="480" style="margin: 1rem 0;" allow="autoplay" sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"></iframe>
+      <iframe
+  src="https://drive.google.com/file/d/19F2lGtj8X074q-WnzJGZtml3pYiBA2bt/preview"
+  width="100%"
+  height="480"
+  style="margin: 1rem 0; border-radius: 8px;"
+  allow="autoplay; fullscreen"
+  allowfullscreen>
+</iframe>
       <h3>Dicas para Entrevistas</h3>
       <ul>
         <li>Sempre use commits descritivos em português ou inglês</li>
