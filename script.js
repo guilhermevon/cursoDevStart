@@ -302,7 +302,7 @@ const lessons = {
       <p>3.<code>&lt;a href="url"&gt;</code>: Links para outras páginas</p>
       <p><strong>Exemplo:</strong></p>
       <pre><code>&lt;a href="https://google.com"&gt;Clique aqui&lt;/a&gt;</code></pre>
-      <video src="imagens/MeuPrimeiroSite.mp4" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
+      <video src="https://drive.google.com/file/d/19F2lGtj8X074q-WnzJGZtml3pYiBA2bt/view?usp=drive_link" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
       <p>4.<code>&lt;img src="imagem.jpg" alt="descrição"&gt;</code>: Imagens (alt é obrigatório para acessibilidade)</p>
       <p><strong>Exemplo:</strong></p>
       <pre><code>&lt;img src="foto.jpg" alt="Foto do perfil"&gt;</code></pre>
@@ -458,7 +458,7 @@ const lessons = {
         <li><code>::pseudo-elemento</code>: Partes do elemento (::before, ::after)</li>
       </ul>
       <p>Abaixo há um vídeo explicando os seletores de forma prática:</p>
-      <video src="imagens/videoSeletores-trim.mp4" style="max-width: 100%; height: auto; margin: 1rem 0;" controls></video>
+      <video src="https://drive.google.com/file/d/1eo6-wxOEFlbQ4QeI67CtMXe_PKywCcK2/view?usp=drive_link" style="max-width: 100%; height: auto; margin: 1rem 0;" controls></video>
       <h3>Box Model</h3>
       <p>
         Todo elemento HTML é uma caixa retangular composta por:
@@ -1629,7 +1629,7 @@ Thumbs.db
         <li>Volte para main e mescle: <code>git checkout main && git merge feature/improvements</code></li>
       </ul>
       <h4>Abaixo um vídeo explicativo para criação de repositório no GitHub:</h4>
-      <video src="imagens/githubVideo.mp4" title="video" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
+      <video src="https://drive.google.com/file/d/1yKPwH8YX3DTEjjCgPnIFMjsiArQeyKFy/view?usp=drive_link" title="video" style="max-width: 40%; height: auto; margin: 1rem 0;" controls></video>
       <h3>Dicas para Entrevistas</h3>
       <ul>
         <li>Sempre use commits descritivos em português ou inglês</li>
